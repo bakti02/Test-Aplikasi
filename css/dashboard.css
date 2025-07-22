@@ -56,3 +56,28 @@ body {
 
 .up { color: green; }
 .down { color: red; }
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto; /* Biar bisa scroll jika menu panjang */
+}
+
+.main-content {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
