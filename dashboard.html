@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Crypto App</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li><a href="buy.html">Beli Kripto</a></li>
+            <li><a href="sell.html">Jual Kripto</a></li>
+            <li><a href="transactions.html">Riwayat</a></li>
+            <li><a href="#" id="logout">Keluar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h1>Selamat Datang, <span id="username"></span>!</h1>
+        
+        <!-- Card Saldo -->
+        <div class="card">
+            <h3>Saldo Anda</h3>
+            <p>IDR: <span id="balance-idr">1,000,000</span></p>
+            <p>BTC: <span id="balance-btc">0.05</span></p>
+            <button onclick="topup()">Top Up Saldo</button>
+        </div>
+
+        <!-- Daftar Kripto -->
+        <div class="crypto-list">
+            <h3>Harga Kripto Hari Ini</h3>
+            <table>
+                <tr>
+                    <th>Koin</th>
+                    <th>Harga (IDR)</th>
+                    <th>24h</th>
+                </tr>
+                <tr>
+                    <td>Bitcoin (BTC)</td>
+                    <td id="btc-price">500,000,000</td>
+                    <td class="up">+2.5%</td>
+                </tr>
+                <tr>
+                    <td>Ethereum (ETH)</td>
+                    <td id="eth-price">30,000,000</td>
+                    <td class="down">-1.2%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
